@@ -1,0 +1,13 @@
+<!--index.wxml-->
+<view>发送请求：</view>
+<view class="btnContainer marginTop20">
+    <button size="mini" bindtap="load">获取车站信息</button>
+</view>
+<view class="marginTop20">返回值：</view>
+<view class="result">
+    <view wx:if="{{eva}}">
+        <image src="{{eva.picture.url}}" mode="widthFix"/>
+        <text>{{eva.name}}</text>
+    </view>
+    <view wx:if="{{error}}" style="color: #D66;">{{error}}</view>
+</view>
